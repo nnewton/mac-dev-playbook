@@ -30,6 +30,10 @@
     - include_tasks: tasks/terminal.yml
       when: configure_terminal
 
+    - include_tasks: tasks/copy-osx-config.yml
+      when: copy_osx_config_script
+      tags: ['osx']
+
     - include_tasks: tasks/osx.yml
       when: configure_osx
       tags: ['osx']

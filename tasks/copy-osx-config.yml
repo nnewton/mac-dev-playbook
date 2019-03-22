@@ -1,0 +1,8 @@
+---
+# Copy out an osx config file when not included in dotfiles configuration.
+
+- name: "Copy osx configuration script"
+  copy:
+    src: "{{ osx_config_script_file }}"
+    dest: "~/{{ osx_config_script_file }}"
+    mode: "0755"
