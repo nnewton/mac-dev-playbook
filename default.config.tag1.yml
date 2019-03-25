@@ -64,6 +64,7 @@ homebrew_cask_apps:
   - google-chrome
   - private-internet-access
   - vagrant
+  - virtualbox
   - visual-studio-code
   - vlc
   - xact
