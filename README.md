@@ -12,7 +12,8 @@ Forked from https://github.com/geerlingguy/mac-dev-playbook
   4. Sign into the Mac App store manually -- this is required for the mas tool to run successfully. See https://github.com/mas-cli/mas/issues/164
   5. Run `$ ansible-galaxy install -r requirements.yml` inside this directory to install required Ansible roles.
   6. Copy `default.config.tag1.yml` to `config.yml`.
-  6. Run `ansible-playbook main.yml -i inventory -K --ask-vault-pass` inside this directory. You will be prompted for your password, and if you've enabled MAS installations, you may have to enter your iCloud login into a pop up at some point.
+  7. Optionally enter your MAS email and password (suggest to use ansible-vault to encrypt the password) in order to install MAS apps.
+  8. Run `ansible-playbook main.yml -i inventory -K --ask-vault-pass` inside this directory. You will be prompted for your password, and if you've enabled MAS installations, you may have to enter your iCloud login into a pop up at some point.
 
 > Note: If some Homebrew commands fail, you might need to agree to Xcode's license or fix some other Brew issue. Run `brew doctor` to see if this is the case.
 
