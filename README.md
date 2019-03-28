@@ -7,12 +7,12 @@ Forked from https://github.com/geerlingguy/mac-dev-playbook
 ### TODO: write bootstrap script to install xcode and Ansible, and run ansible-galaxy install on requirements.yml
 
   1. Ensure Apple's command line tools are installed (`xcode-select --install` to launch the installer).
-  2. [Install Ansible](http://docs.ansible.com/intro_installation.html).
+  2. Install Ansible (`sudo easy_install pip` followed by `pip install ansible`). See the [Ansible install docs](http://docs.ansible.com/intro_installation.html) for more info.
   3. Clone this repository to your local drive. Note that for mas to work, this has to be run against localhost, not remotely.
   4. Sign into the Mac App store manually -- this is required for the mas tool to run successfully. See https://github.com/mas-cli/mas/issues/164
   5. Run `$ ansible-galaxy install -r requirements.yml` inside this directory to install required Ansible roles.
-  6. Copy `default.config.jeff.yml` to `config.yml`.
-  6. Run `ansible-playbook main.yml -i inventory -K --ask-vault-pass` inside this directory.
+  6. Copy `default.config.tag1.yml` to `config.yml`.
+  6. Run `ansible-playbook main.yml -i inventory -K --ask-vault-pass` inside this directory. You will be prompted for your password, and if you've enabled MAS installations, you may have to enter your iCloud login into a pop up at some point.
 
 > Note: If some Homebrew commands fail, you might need to agree to Xcode's license or fix some other Brew issue. Run `brew doctor` to see if this is the case.
 
