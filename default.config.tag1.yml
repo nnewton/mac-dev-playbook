@@ -48,7 +48,6 @@ homebrew_installed_packages:
   - xz
 
 homebrew_taps:
-  - drud/ddev
   - homebrew/core
   - homebrew/cask
 
@@ -56,26 +55,17 @@ homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - 1password
   - 1password-cli
-  - calibre
   - deluge
   - docker
-  - evernote
   - firefox
   - google-chrome
-  - private-internet-access
   - vagrant
   - virtualbox
-  - visual-studio-code
-  - vlc
-  - xact
 
-#mas_email: "jeff@sheltren.com"
+#mas_email: "narayannewton@gmail.com"
 #mas_password: !vault |
 
 mas_installed_apps:
-  - { id: 409907375, name: "Apple Remote Desktop" }
-  - { id: 1003160018, name: "Quip" }
-  - { id: 425955336, name: "Skitch" }
   - { id: 803453959, name: "Slack" }
 
 osx_script: "~/.osx-system-setup --no-restart"
